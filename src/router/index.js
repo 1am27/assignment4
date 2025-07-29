@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import CautionView from '../views/CautionView.vue'; // 警報ページの読み込
+import ForecastView from '../views/ForecastView.vue'; // 予報ページの読み込み
+import HomeView from '../views/HomeView.vue';
 
 Vue.use(VueRouter)
 
@@ -8,16 +10,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
   },
+  
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/forecast',
+    name: 'forecast',
+    component: ForecastView
+  },
+  
+  // 購入ページのルートを追加
+  {
+    path: '/caution',
+    name: 'caution',
+    component: CautionView
+  }, 
+
 ]
 
 const router = new VueRouter({

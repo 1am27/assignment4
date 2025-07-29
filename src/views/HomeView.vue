@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <SelectRegion @regionSelected="RegionChange" />
+    <p>選択されたコード: {{ selectedCode }}</p>
+    <router-link to="/forecast">
+      <v-btn>画面遷移する</v-btn>
+    </router-link>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import SelectRegion from "@/components/SelectRegion.vue";
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  components: { SelectRegion },
+  data() {
+    return {
+      selectedCode: null,
+    };
+  },
+  methods: {
+    RegionChange(code) {
+      this.selectedCode = code;
+      this.$store.dispatch("forecast/fetchForecast", code); 
+    },
+    pagechange(){
+      this.$rounter.push('/forecast');
+    }
   }
-}
+};
 </script>
