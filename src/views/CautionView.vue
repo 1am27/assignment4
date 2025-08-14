@@ -1,17 +1,17 @@
 <template>
   <v-container>
-    <WeatherCaution />
+    <SelectedCustomerlist />
   </v-container>
 </template>
 
 <script>
-  import WeatherCaution from '@/components/WeatherCaution.vue' //.vueをインポート
+  import SelectedCustomerlist from '@/components/SelectedCustomerlist.vue' //.vueをインポート
 
   export default {
     name: 'HomeView',
 
     components: {
-      WeatherCaution,
+      SelectedCustomerlist,
     },
   }
 </script>

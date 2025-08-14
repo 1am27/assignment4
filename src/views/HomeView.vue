@@ -9,6 +9,7 @@
 </template>
 
 <script>
+//親コンポーネント
 import SelectRegion from "@/components/SelectRegion.vue";
 
 export default {
@@ -24,7 +25,7 @@ export default {
       this.$store.dispatch("forecast/fetchForecast", code); 
     },
     pagechange(){
-      this.$rounter.push('/forecast');
+      this.$router.push('/forecast');
     }
   }
 };

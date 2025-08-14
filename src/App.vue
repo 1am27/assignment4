@@ -2,40 +2,39 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
+      color="#7A85C1"
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="My Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="@/assets/DB2.png"
           transition="scale-transition"
-          width="40"
+          width="90"
+          height="90"
         />
 
         <v-img
-          alt="Vuetify Name"
+          alt="DB Name"
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          src=" "
           width="100"
         />
       </div>
 
       <v-spacer></v-spacer>
-      <v-btn text to="/" tag="router-link">地域選択</v-btn>
-      <v-btn text to="/forecast" tag="router-link">天気予報</v-btn>
-      <v-btn text to="/caution" tag="router-link">注意報</v-btn> <!-- 購入ビューを追加 -->
-      <v-btn text to="/purchase" tag="router-link">参照API</v-btn>
+      <v-btn text to="/" tag="router-link">DB追加</v-btn>
+      <v-btn text to="/list" tag="router-link">一覧</v-btn>
+      <v-btn text to="/selectedlist" tag="router-link">業種別一覧</v-btn> <!-- 購入ビューを追加 -->
       <v-btn
-        href="https://www.jma.go.jp/bosai/forecast/"
+        href="https://www.tdb.co.jp/service/u/1000.jsp"
         target="_blank"
         text
       >
-        <span class="mr-2">Forecast Resource</span>
+        <span class="mr-2">参照</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>

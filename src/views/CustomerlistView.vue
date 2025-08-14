@@ -1,16 +1,16 @@
 <template>
   <v-container>
-    <CustomerInfo />
+    <Customerlist />
   </v-container>
 </template>
 
 <script>
-  import CustomerInfo from '@/components/CustomerInfo.vue' //.vueをインポート
+  import Customerlist from '@/components/Customerlist.vue' //.vueをインポート
 
   export default {
     name: 'HomeView',
     components: {
-      CustomerInfo,
+      Customerlist,
     },
   }
 </script>

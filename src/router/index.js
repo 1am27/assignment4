@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import CautionView from '../views/CautionView.vue'; // 警報ページの読み込
 import ForecastView from '../views/ForecastView.vue'; // 予報ページの読み込み
-import HomeView from '../views/HomeView.vue';
+import CustomerlistView from '../views/CustomerlistView.vue';
 
 Vue.use(VueRouter)
 
@@ -10,19 +10,19 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
+    component: ForecastView
   },
   
   {
-    path: '/forecast',
-    name: 'forecast',
-    component: ForecastView
+    path: '/list',
+    name: 'list',
+    component: CustomerlistView
   },
   
   // 購入ページのルートを追加
   {
-    path: '/caution',
-    name: 'caution',
+    path: '/selectedlist',
+    name: 'selectedlist',
     component: CautionView
   }, 
 
