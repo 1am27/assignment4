@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CautionView from '../views/CautionView.vue'; // 警報ページの読み込
-import ForecastView from '../views/ForecastView.vue'; // 予報ページの読み込み
-import CustomerlistView from '../views/CustomerlistView.vue';
+import SelectDBView from '../views/SelectDBView.vue'; // 予報ページの読み込み
+import EmotionResultView from '../views/EmotionResultView.vue';
+import SpotifyRecommendation from '../views/SpotifyRecommendation.vue';
+import ChatbotView from '../views/ChatbotView.vue';
 
 Vue.use(VueRouter)
 
@@ -10,20 +11,25 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: ForecastView
+    component: ChatbotView
   },
   
   {
-    path: '/list',
-    name: 'list',
-    component: CustomerlistView
+    path: '/spotify',
+    name: 'spotify',
+    component: SpotifyRecommendation
   },
   
-  // 購入ページのルートを追加
   {
-    path: '/selectedlist',
-    name: 'selectedlist',
-    component: CautionView
+    path: '/emotionresult',
+    name: 'emotionresult',
+    component: EmotionResultView
+  }, 
+
+  {
+    path: '/db',
+    name: 'playlist',
+    component: SelectDBView
   }, 
 
 ]

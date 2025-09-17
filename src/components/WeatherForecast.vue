@@ -36,6 +36,5 @@ export default {
       this.$store.dispatch('forecast/fetchForecast', this.selectedCode);
     }
   }
-
 }
 </script>

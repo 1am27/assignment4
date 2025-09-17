@@ -89,7 +89,7 @@ export default {
       required: v => !!v || "必須項目です",
       prefix: 
       v => {
-        const regex = /^[A-Z]\d{3}$/; // 正規表現を変数に格納
+        const regex = /^[A-Z]\d{3}$/;
         return regex.test(v) || "A～Zで始まり数字3桁で入力してください";
       },
       name: 

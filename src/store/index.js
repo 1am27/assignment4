@@ -4,6 +4,7 @@ import product from './modules/product'   //商品管理モジュールをイン
 import forecast from './modules/forecast' //天気予報モジュールをインポート
 import caution from './modules/caution'   //警戒情報モジュールをインポート
 import data from "./modules/data"
+import AI from "./modules/AI"
 
 Vue.use(Vuex)
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
     product,  //productモジュールを登録
     forecast, //forecastモジュールを登録
     caution,   //cautionモジュールを登録
-    data
+    data,
+    AI
   }
 })
